@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  min-height: 100vh;
+  background-color: #7a918d;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #b5b5b5;
+  border-top: 10px solid #f8e448d3;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  min-width: 100px;
+  min-height: 40px;
+}
+
+.ball {
+  width: 25px;
+  height: 25px;
+  background-color: #a9adbb;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #000;
+  animation: ball 0.4s ease-out infinite alternate;
+}
+
+.second {
+  align-self: flex-start;
+  animation: second 0.4s ease-out infinite alternate;
+}
+
+@keyframes ball {
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes second {
+  to {
+    transform: translateY(15px);
+  }
+}
